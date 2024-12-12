@@ -1,0 +1,163 @@
+/* CSS FOR ALL BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+/* Register Page CSS */
+.reg-register-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Pics/burger-with-tomatoes-lettuce-cheese-served-with-french-fries.jpg');
+    background-size: 50% auto;
+    background-repeat: repeat-x;
+    background-position: 0% 40%;
+    overflow: hidden; /* Ensure no scrolling */
+}
+
+.reg-register-container > .side-layout-box {
+    width: 45%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+}
+
+.reg-register-container > .reg-register-box {
+    width: 55%;
+    height: 100%;
+    background: rgb(250, 250, 255);
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    position: relative;
+    z-index: 11;
+    box-shadow: 2px 2px 10px rgb(71, 71, 71);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.register-inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.name-inputs-container {
+    display: flex;
+    flex-direction: column; /* Stack first and last name vertically */
+    gap: 20px;
+}
+
+.name-input-box,
+.email-input-box,
+.password-input-box,
+.confirm-password-input-box,
+.address-input-box,
+.phone-input-box {
+    border-bottom: 3px solid gray;
+    border-radius: 2px;
+    width: 270px;
+    height: 60px;
+    position: relative;
+}
+
+.name-input-box > label,
+.email-input-box > label,
+.password-input-box > label,
+.confirm-password-input-box > label,
+.address-input-box > label,
+.phone-input-box > label {
+    color: rgb(95, 94, 94);
+    font-weight: 500;
+}
+
+.name-input-box > input,
+.email-input-box > input,
+.password-input-box > input,
+.confirm-password-input-box > input,
+.address-input-box > input,
+.phone-input-box > input {
+    outline: none;
+    border: none;
+    caret-color: gray;
+    width: 90%;
+    position: absolute;
+    right: 0px;
+    top: 24px;
+    height: 30px;
+    color: gray;
+}
+
+/* Icon Styles */
+.name-input-box > i,
+.email-input-box > i,
+.password-input-box > .fa-lock,
+.confirm-password-input-box > .fa-lock,
+.address-input-box > i,
+.phone-input-box > i {
+    position: absolute;
+    top: 30px;
+    left: 2px;
+    color: gray;
+}
+
+.eye-icons{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.Register-btn-box {
+    width: 270px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.Register-btn-box > button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(95, 94, 94);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.Register-btn-box > button:hover {
+    color: rgb(70, 69, 69);
+}
+
+.create-acc-box a {
+    color: rgb(16, 141, 60);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .reg-register-container {
+        flex-direction: column;
+    }
+    .reg-register-container > .side-layout-box,
+    .reg-register-container > .reg-register-box {
+        width: 100%;
+    }
+    .name-inputs-container {
+        flex-direction: column;
+    }
+    .name-input-box {
+        width: 100%;
+    }
+}
