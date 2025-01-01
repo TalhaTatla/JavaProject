@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <title>Modeling Agency Website</title>
+    <link rel="stylesheet" href="ExplorePage.css">
+    <link rel="stylesheet" href="HomePageClient.css">
+</head>
+
+<body>
+
+     <!-- CREATING NAVBAR -->
+    <div id="navbar">
+        <a href="#HOME" class="logo">
+            <img src="Pics/logo.png" alt="cinexcs icon">
+        </a>
+
+        <ul class="navlist">
+            <li><a href="./LandingPage.htm">HOME</a></li>
+            <li><a href="#" id="notifications-button">ORDERS LIST</a></li>
+            <li><a href="#EXPLORE">EXPLORE</a></li>
+            <li><a href="./About.htm">ABOUT</a></li>
+            <li><a href="./LandingPage.htm">LOGOUT</a></li>
+        </ul>
+    </div>
+  
+    <!-- CREATING SEARCH AND CATEGORY -->
+    <div style="display: none;" class="filter-controls">
+        <div class="search-bar" id="search-models">
+            <input type="text" id="searchInput" placeholder="Search models..." />
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="category-bar">
+            <a href="#" class="category-link active" data-category="all">ALL</a>
+            <a href="#" class="category-link" data-category="male">MALE</a>
+            <a href="#" class="category-link" data-category="female">FEMALE</a>
+        </div>
+    </div>
+    
+    <!-- CREATING MODEL GALLERY -->
+    <div class="manage-models-section models-list" id="model-gallery">
+        <!-- Model cards (dynamic for each model) -->
+    </div>
+
+    <!-- Notifications Card -->
+    <div id="notifications-card" class="hidden">
+        <button id="close-card" class="close-btn">&times;</button>
+        <h3>Orders</h3>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active">Accepted</button>
+            <button hidden class="tab-btn">Rejected</button>
+            <button hidden class="tab-btn">Pending</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="Accep-Notifications" class="tab-pane active">
+                
+            </div>
+            <div id="Rej-Notifications" class="tab-pane">
+                
+            </div>
+            <div id="Pend-Notifications" class="tab-pane">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hire-card-modal">
+        <div id="hire-card">
+            <h3>Order Now</h3>
+            <form action="http://localhost:8080/client/hiringmodel" method="post">
+                <input type="number" hidden id="modelIds"  name="modelId" />
+                <input type="number" hidden id="clientIds" name="clientId" />
+                <input type="date" hidden id="amounts" name="requestedDate" />
+                <div class="input-field">
+                    <label for="hire-date">Quantity:</label>
+                    <input type="number" min="1" step="1" id="hire-date" name="amount" />
+                </div>
+    
+                <div style="display: none;" class="input-field">
+                    <label for="hire-description">Description:</label>
+                    <textarea id="hire-description" name="description" 
+                        placeholder="Write something about your project..."></textarea>
+                </div>
+    
+                <div class="actions">
+                    <button type="submit" id="hire-confirm" style="border: 1px solid grey; background-color: rgb(28, 74, 98);" class="btn cnfrm-btn">Confirm Hire</button>
+                    <button id="hire-cancel" class="btn cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="ExplorePage.js"></script>
+    <script src="HomePageClient.js"></script>
+</body>
+
+</html>

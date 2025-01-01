@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS FOR ALL BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+/* CSS FOR NAVBAR */
+#navbar {
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 3%;
+    position: sticky;
+    background-color: #072d41;
+    z-index: 1000;
+}
+
+#navbar .logo img {
+    width: 65px;
+}
+
+#navbar .navlist {
+    display: flex;
+}
+
+#navbar .navlist li {
+    padding: 20px;
+}
+
+#navbar .navlist li a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+#navbar .navlist li a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    padding-top: 0px;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+/* CSS FOR CONTAINER */
+#container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #072d41;
+}
+
+/* CSS FOR LEFT SIDE (MODEL DETAILS CARD) */
+#model-details {
+    width: 250px;
+    height: 380px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    margin-right: 42px;
+    margin-left: 20px;
+    margin-top: 70px;
+    color: #fff;
+}
+
+#model-details h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#hire-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+#hire-btn:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CSS FOR IMAGE SLIDER */
+#image-slider {
+    width: 75%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image-wrapper img {
+    width: 33.333%;
+    flex-shrink: 0;
+    margin: 5px;
+}
+
+.experience-line {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* CSS FOR SLIDER CONTROLS */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* CSS FOR DESCRIPTION */
+#agency-description {
+    margin-top: 25px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+/* CSS FOR SOCIAL MEDIA ICONS */
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: black;
+}
+
+/* CSS for the Hire Now card modal */
+#hire-card-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+#hire-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hire-card h3 {
+    margin-bottom: 20px;
+    color: #072d41;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    font-size: 16px;
+    color: #072d41;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.input-field textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #072d41;
+    color: white;
+}
+
+.btn.cancel {
+    background-color: #ccc;
+}
+
+#hire-card-modal.show {
+    display: flex; /* Show the modal */
+}
