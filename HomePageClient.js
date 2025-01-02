@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (notify.state == "ACCEPTED"){
                 accepNotifications.append(`
                     <div class="notification-line">
-                        <span class="model-name">Model: ${notify.model.name}</span>
-                        <span class="request-date">Request: ${notify.requestedDate.split('T')[0]}</span>
+                        <span class="model-name">Order: ${notify.model.name}</span>
+                        <span class="request-date">Date: ${notify.requestedDate.split('T')[0]}</span>
                     </div>
                     `)
             }
