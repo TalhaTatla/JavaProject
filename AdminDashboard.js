@@ -134,7 +134,7 @@ function openAddCategory(){
     document.querySelector('#Add-Md-Form').style.display = 'block';
     editingIndex = null; // Reset editingIndex for adding a new model
     document.getElementById('Add-Md-Form').innerHTML = `
-        <h2>Add New Model</h2>
+        <h2>Add New Category</h2>
         <form id="add-categ-form">
             <div class="form-group"><label for="model-name">Name:</label><input type="text" name="name" id="categname" required></div>
             <button type="submit">Add Category</button>
@@ -186,7 +186,20 @@ function handleCatFormSubmit(event){
     });
 }
 
-
+const modelPics = [
+    'Pics/B2.jpg',
+    'Pics/B1.jpg',
+    'Pics/B3.jpg',
+    'Pics/P4.jpg',
+    'Pics/P5.jpg',
+    'Pics/P6.jpg',
+    'Pics/P7.jpg',
+    'Pics/P8.jpg',
+    'Pics/Piza1.jpg',
+    'Pics/Pizza2.jpg',
+    'Pics/pizza3.jpg',
+    
+];
 // Model Data Array
 let models = []; // Stores model objects
 let editingIndex = null; // Keeps track of the model being edited
@@ -203,6 +216,7 @@ function renderModels(allmodels) {
         modelContainer.innerHTML = `
             <div class="model-card">
                 <div class="model-card-header">
+                    <img src="${modelPics[index]}" alt="${model.name}" class="model-img"></img>
                     <div class="model-card-title">${model.name}</div>
                 </div>
                 <div class="model-card-body">
@@ -227,7 +241,7 @@ function openAddModelForm() {
     document.querySelector('#Add-Cat-Form').style.display = 'block';
     editingIndex = null; // Reset editingIndex for adding a new model
     document.getElementById('Add-Cat-Form').innerHTML = `
-        <h2>Add New Model</h2>
+        <h2>Add New Product</h2>
         <form id="add-model-form">
             ${getModelFormFields()}
             <button type="submit">Add Product</button>
@@ -245,7 +259,7 @@ function openEditModelForm(index) {
     const model = models[index];
     console.log(model);
     document.getElementById('Edit-Md-Form').innerHTML = `
-        <h2>Edit Model</h2>
+        <h2>Edit Product</h2>
         <form id="add-model-form">
             ${getModelEditFormFields(model)}
             <button type="submit">Save Changes</button>

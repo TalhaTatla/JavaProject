@@ -4,21 +4,18 @@ const hireCancelBtn = document.getElementById('hire-cancel');
 
 document.addEventListener('DOMContentLoaded', () => {
     const modelPics = [
-         'Pics/Ali-khan-main-pic.png',
-         'Pics/Huzaifa-main-pic.png',
-         'Pics/Saad-main-pic.png',
-         'Pics/SZA-main-pic.png',
-         'Pics/AliBaksh-main-pic.png',
-         'Pics/1574791858_2633.jpg',
-         'Pics/1574791859_2634.jpg',
-         'Pics/1574792204_2844.jpg',
-         'Pics/1574792203_2843.jpg',
-         'Pics/1574792203_2843.jpg',
-         'Pics/1574793622_2972.jpg',
-         'Pics/1574793623_2973.jpg',
-         'Pics/1574792159_2799.jpg',
-         'Pics/1574791860_2635.jpg',
-         'Pics/1574792158_2797.jpg'
+         'Pics/B2.jpg',
+         'Pics/B1.jpg',
+         'Pics/B3.jpg',
+         'Pics/P4.jpg',
+         'Pics/P5.jpg',
+         'Pics/P6.jpg',
+         'Pics/P7.jpg',
+         'Pics/P8.jpg',
+         'Pics/Piza1.jpg',
+         'Pics/Pizza2.jpg',
+         'Pics/pizza3.jpg',
+         
     ];
     // --- RENDER MODEL CARDS ---
     //const gallery = document.getElementById('model-gallery');
@@ -34,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modelContainer.innerHTML = `
             <div class="model-card">
                 <div class="model-card-header">
+                    <img src="${modelPics[index]}" alt="${model.name}" class="model-img"></img>
                     <div class="model-card-title">${model.name}</div>
                 </div>
                 <div class="model-card-body">
